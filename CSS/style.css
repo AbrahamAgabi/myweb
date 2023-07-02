@@ -1,0 +1,230 @@
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --mangeta: #e310cb;
+    --hotmeg: #ff17e4;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+
+    --font-size: 1.2rem;
+    --mono: "Oxygen mono", monospace;
+    /* --sans: Oxygen, sans-serif; */
+    --sans: 'Montserrat', sans-serif;
+}
+
+/* CSS reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 100%;
+    box-sizing: inherit;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size);
+    font-family: var(--sans);
+    background-color: var(--black);
+    color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: var(--mangeta);
+}
+
+a:hover {
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* navbar */
+nav{
+    font-size: 80%;
+    font-family: var(--sans);
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+
+}
+
+nav ul li:first-child{
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav [class*="fa-"] {
+    font-size: 150%;
+}
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    display: inline-block;
+}
+
+nav a:hover,
+nav [class*="fa-"]:hover {
+    color: var(--mangeta);
+}
+
+.button {
+    background-color: var(--mangeta);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: var(--hotmeg);
+    color: var(--white);
+}
+
+/* for destop view */
+@media(min-width: 800px) {
+    nav {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    nav ul li:first-child {
+        flex-basis:auto;
+        text-align: left;
+        margin-right: auto;
+    }
+
+}
+
+/* section */
+#intro {
+    margin: 10rem 0 0 0;
+    padding-left: 4rem;
+}
+
+
+/* My codes */
+.bold {
+    margin: 3.5rem 0 0 0;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 200;
+    background-color: var(--dkblue);
+}
+
+.bold, .b-holder {
+    padding: 25px;
+}
+
+/* icons */
+i {
+    font-size: 6rem;
+    margin: 0 0 2rem 0;
+}
+
+.change {
+    font-weight: 200;
+}
+
+/* Cards */
+
+.cards {
+    margin: 4rem auto;
+}
+.cards .card-holder {
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.cards .card {
+    background-color: var(--plum);
+    width: 350px;
+    border-radius: 10px;
+    margin: 1rem;
+    text-align: center;
+    padding: 30px;
+}
+    hr {
+        width: 50px;
+        border-color: var(--aqua);
+      }
+
+.cards .card:hover {
+    background-color: var(--mangeta);
+}
+
+/* contact */
+
+.contacts {
+    background-color: var(--plum);
+    text-align: center;
+    padding: 4rem 2rem;
+    border-top: 2px solid var(--mangeta);
+    border-bottom: 2px solid var(--mangeta);
+}
+
+.contacts p {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.contacts .button {
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* footer */
+
+.footer {
+    background-color: var(--dkblue);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.footer ul a {
+    text-decoration: none;
+}
+
+@media(max-width: 800px) {
+.cards .card-holder {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+}
